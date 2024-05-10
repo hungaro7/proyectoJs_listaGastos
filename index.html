@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Gastos Personales Mensuales</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <h1>Calculadora de Gastos Personales Mensuales</h1>
+    
+    <div id="user-section">
+        <h2>Seleccionar Usuario</h2>
+        <select id="user-select">
+            <!-- Opciones de usuario se agregarán aquí -->
+        </select>
+    </div>
+
+    <div id="movement-section" style="display: none;">
+        <h2>Movimientos</h2>
+        <form id="movement-form" action="#" onsubmit="return listMovement(this)">
+            <label for="movement-type">Tipo:</label>
+            <select id="movement-type">
+                <option value="ingreso">Ingreso</option>
+                <option value="egreso">Egreso</option>
+            </select>
+            <label for="movement-name">Nombre:</label>
+            <input type="text" id="movement-name" required>
+            <label for="movement-amount">Cantidad:</label>
+            <input type="number" id="movement-amount" min="0" step="0.01" required>
+            <input type="submit" value="Agregar Movimiento">
+        </form>
+
+        <div id="movement-list">
+            <h3>Lista de Ingresos</h3>
+            <ul id="movements">
+                <!-- Aquí se agregarán los movimientos -->
+            </ul>
+        </div>
+
+        <div id="movement-list2">
+            <h3>Lista de Egresos</h3>
+            <ul id="movements2">
+                <!-- Aquí se agregarán los movimientos -->
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
